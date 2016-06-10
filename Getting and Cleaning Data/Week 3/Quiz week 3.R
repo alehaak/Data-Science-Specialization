@@ -28,11 +28,12 @@
     edu = fread(fileName3b)
     merge = merge(gdp, edu, by = 'CountryCode')
     nrow(merge)
+    library("plyr")
     arrange(merge, desc(Rank))[13, Economy]
 
 #Question4
-    tapply(merge$Rank, merge$`Income Group`, mean)
+    tapply(merge$Rank, merge$'Income Group', mean)
 
 #Question5
-    merge$RankGroups <- cut(merge$Rank, g=5)
-    table(merge$RankGroups, merge$`Income Group`)
+    merge$RankGroups <- cut(merge$Rank, 5)
+    table(merge$RankGroups, merge$'Income Group')
