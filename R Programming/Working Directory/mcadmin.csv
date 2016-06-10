@@ -1,0 +1,2 @@
+liqpay_id, create_date, amount, currency, receiver_card, receiver_country_code, receiver_card_type, receiver_card_product_type, status, destination, sender_email, receiver_first_name, receiver_last_name 
+165576802,2016-04-29 05:04:44,0.10,EUR,450644** **** 0153,Canada,visa,D,00 success,interregional,alehaak@gmail.com,CARLOS,HAAK
