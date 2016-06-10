@@ -1,12 +1,14 @@
 #Question 1
     fileurl = 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv'
     data = './data/data.csv'
-    ##download.file(fileurl, data, mode = 'wb')
     download.file(fileurl, data)
     data1 <- read.csv(data)
     wtgp <- names(data1)
     strsplit(wtgp, 'wtgp')[123]
 
+#strsplit(names(read.csv(download.file(fileUrl, './data/data.csv'))), 'wtgp')[123]
+    
+    
 #Question 2 & 3
     # download data
         file.url <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv'
