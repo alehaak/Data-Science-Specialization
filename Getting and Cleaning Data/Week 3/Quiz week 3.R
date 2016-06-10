@@ -1,8 +1,8 @@
 #Question1
-    fileurl1 = 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv'
-    dst1 = '/Users/zhusiqi/Desktop/coursera/R_jhu/geting_and_cleaning_data/week3/q1.csv'
-    download.file(fileurl1, dst1)
-    data1 = read.csv(dst1)
+    fileUrl1 = 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv'
+    fileName = './data/q1.csv'
+    download.file(fileUrl1, fileName)
+    data1 = read.csv(fileName)
     agricultureLogical = data1$ACR == 3 & data1$AGS == 6
     head(which(agricultureLogical), 3)
 
