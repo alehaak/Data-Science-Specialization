@@ -1,4 +1,4 @@
-rm(list=ls())
+#100% on Week 4 Quiz on Getting and Cleaning Data by Johns Hopkins University
 #Question 1
     #Apply strsplit() to split all the names of the data frame on the characters "wgtp". 
     #What is the value of the 123 element of the resulting list?
@@ -46,18 +46,20 @@ rm(list=ls())
         #http://data.worldbank.org/data-catalog/ed-stats
         
     # download data and load it
-        fileUrl <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv'
-        download.file(fileUrl, './data/W4Q4.csv')
-        GDP <- read.csv('./data/W4Q4.csv', skip=4, nrows=190)
-        fileUrl <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv'
-        fileDest <- 'edu.csv'
-        download.file(fileUrl, fileDest)
-        edu <- read.csv(fileDest)
+        fileUrl4a <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv'
+        download.file(fileUrl4a, './data/W4Q4a.csv')
+        GDP <- read.csv('./data/W4Q4a.csv', skip=4, nrows=190)
+        
+        fileUrl4b <- 'https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv'
+        download.file(fileUrl4b, './data/W4Q4b.csv')
+        edu <- read.csv('./data/W4Q4b.csv')
     # merge the datasets
         merged <- merge(GDP, edu, by.x = 'X', by.y = 'CountryCode')
     # extract the information
         fy.june <- grep('Fiscal year end: June', merged$Special.Notes)
         length(fy.june)
+
+        #Answer Question 4 = 13
 
 # Question 5
     #You can use the quantmod (http://www.quantmod.com/) package to get historical stock prices 
@@ -80,3 +82,5 @@ rm(list=ls())
         day <- format(sampleTimes2012, '%A')
     #Count each day
         table(day)
+        
+    #Answer Quesiton5 = 250, 47
