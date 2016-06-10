@@ -11,7 +11,7 @@
     #Assign the data
         wtgp <- names(data1)
         strsplit(wtgp, "wtgp")[123]
-    #Answer: 
+    #Answer: "" "15"
 
 #Question 2 & 3
     #Remove the commas from the GDP numbers in millions of dollars and average them.
