@@ -16,6 +16,7 @@
         dataSubject <- rbind(trainSubject, subjecTest)
     
 #2. Extract only the measurements on the mean and standard deviation for each measurement
+    #Creating 'features' dataset
         features <- read.table("./data/features.txt")
     #Get only columns with mean() or std() in their names
         meanStd <- grep("-(mean|std)\\(\\)", features[, 2])
@@ -25,22 +26,23 @@
         names(dataX) <- features[meanStd, 2]
 
 #3. Use descriptive activity names to name the activities in the data set
+    #Creating 'activities' dataset     
         activities <- read.table("./data/activity_labels.txt")
-    # update values with correct activity names
+    #Update values with correct activity names
         dataY[, 1] <- activities[dataY[, 1], 2]
-    # correct column name
+    #Correct column name
         names(dataY) <- "activity"
 
 #4. Appropriately label the data set with descriptive variable names
-    # correct column name
+    #Correct column name
         names(dataSubject) <- "subject"
     
-    # bind all the data in a single data set
+    #Bind all the data in a single data set
         all_data <- cbind(dataX, dataY, dataSubject)
 
 #5. Create a second, independent tidy data set with the average of each variable
 # for each activity and each subject
-    # 66 <- 68 columns but last two (activity & subject)
+    #66 <- 68 columns but last two (activity & subject)
         averages_data <- ddply(all_data, .(subject, activity), function(x) colMeans(x[, 1:66]))
         write.table(averages_data, "averages_data.txt", row.name=FALSE)
         
