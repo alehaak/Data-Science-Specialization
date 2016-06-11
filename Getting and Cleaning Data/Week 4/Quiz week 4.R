@@ -1,4 +1,5 @@
 #100% on Week 4 Quiz on Getting and Cleaning Data by Johns Hopkins University
+
 #Question 1
     #Apply strsplit() to split all the names of the data frame on the characters "wgtp". 
     #What is the value of the 123 element of the resulting list?
