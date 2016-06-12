@@ -17,9 +17,9 @@ The output file is called `averages_data.txt`, and uploaded to this repository.
 
 * `trainX`, `trainY`, `trainSubject`, `testX`, `testY`, and `testSubject` = data from the downloaded files.
 * `dataX`, `dataY` and `dataSubject` merge of the previous datasets where:
-  *dataX = trainX + testX
-  *dataY = trainY + testY
-  *dataSubject = trainSubject + testSubject
+ * dataX = trainX + testX
+ * dataY = trainY + testY
+ * dataSubject = trainSubject + testSubject
 * `features` contains the fixed names for `dataX', applied to column names in `meanStd`.
 * `activities` receive the same approach.
 * `allData` merges `dataX`, `dataY` and `dataSubject` in one dataset.
