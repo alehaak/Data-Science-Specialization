@@ -3,7 +3,7 @@ Getting and Cleaning Data - Course Project
 
 
 
-This repository has the R code and documentation files for the "Getting and Cleaning data" course project
+This repository has the R code and documentation files for the "Getting and Cleaning data" Week 4 course project
 
 
 
