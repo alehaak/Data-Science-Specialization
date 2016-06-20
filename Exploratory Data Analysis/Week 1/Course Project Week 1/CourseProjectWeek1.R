@@ -1,5 +1,4 @@
 #Exploratory Data Analysis Course Project 1 
-#
 #Exctracting and subsetting dataset
     dataFile <- "./data/hpc.txt"
     data <- read.table(dataFile, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
@@ -46,5 +45,4 @@
         legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=, lwd=2.5, col=c("black", "red", "blue"), bty="o")
     #Bottom Right
         plot(datetime, globalReactivePower, type="l", xlab="datetime", ylab="Global_reactive_power")
-    
     dev.off()
